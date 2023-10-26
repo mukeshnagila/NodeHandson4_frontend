@@ -1,0 +1,67 @@
+body{
+    background-color: lightskyblue;
+}
+.body{
+  padding: 4% 25%;
+}
+
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .log_Sign{
+    background-color: bisque;
+    padding: 10% 10%;
+    border-radius: 20px;
+  }
+
+  .switchbtn{
+    background-color: brown;
+  }
+  .switchbtn:hover{
+     background-color: rgb(28, 57, 43);
+  }
+  
+  .message{
+    color: darkmagenta;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-large;
+    background-color: rgb(218, 169, 149);
+    box-shadow: 5px 5px 15px gray;
+    padding: 10px 0px;
+  }
+
+  .link{
+      text-decoration: none;
+  }
+
+  
