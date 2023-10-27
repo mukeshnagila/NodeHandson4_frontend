@@ -11,6 +11,8 @@ function Verify () {
     useEffect(() => {
         if(token){
             axios.get("https://nodehandson4-backend.onrender.com", {headers: {"Authorization": `Bearer ${token}`}} )
+            // axios.get('http://localhost:2005/', {headers: {"Authorization": `Bearer ${token}`}} )
+
                 .then((res) =>{
                     console.log(res.data)
                 });

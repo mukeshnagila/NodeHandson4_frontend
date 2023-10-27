@@ -18,7 +18,7 @@ function Login() {
 
   const redirect = useNavigate();
 
-  // const [store, setsrore] = useState([]);
+  // const [store, setsrore] = useState(null);
 
   const [responseMessage, setResponseMessage] = useState('');
 
@@ -37,17 +37,29 @@ function Login() {
         return;
     }
 
+    if(email && password){
     axios.post('https://nodehandson4-backend.onrender.com/api/login', data)
+    // axios.post('http://localhost:2005/api/login', data)
+
       // .then((res) => console.log(res.data))
-      .then((res) => {
-        console.log(res.data)
-        setResponseMessage(res.data.message);
-        alert(res.data.message);
-        // setsrore(res.data)
-        localStorage.setItem('token', res.data.token);
-        redirect('/Verify');
-      })
-      .catch((err) => console.log(err));
+
+        .then((res) => {
+          console.log(res.data)
+          setResponseMessage(res.data.message);
+          // setsrore(res.data)
+          alert(res.data.message);
+          localStorage.setItem('token', res.data.token);
+          if(res.data.message === "Login failed. Email not found." || res.data.message === "User is not correct. Please enter the correct details"){
+              redirect('/login');
+          }else{
+               redirect('/Verify');
+          }
+        })
+        .catch((err) => console.log(err));
+      }else{
+        // setsrore("Please enter email and password.");
+        redirect("/register");
+      }
 
     setData({
       email: '',
