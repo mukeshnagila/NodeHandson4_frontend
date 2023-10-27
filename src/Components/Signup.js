@@ -33,6 +33,7 @@ const Signup = () => {
     }
 
     axios.post('https://nodehandson4-backend.onrender.com/api/register', data)
+    // axios.post('http://localhost:2005/api/register', data)
       // .then((res) => console.log(res.data))
       .then((res) => {
         console.log(res.data)
